@@ -1,0 +1,11 @@
+<h1 class="justify-content-center">Restaurant List:</h1>
+
+<div class="row justify-content-md-center">
+  <div class="clo-6-6">
+    <% @restaurants.each do |r| %>
+      <h2><%= link_to r.name, restaurant_path(r) %></h2>
+      <p><%= r.address %></p>
+    <% end %>
+  </div>
+</div>
+<%= link_to "add restaurant", new_restaurant_path %>
